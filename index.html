@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#125ad5">
+  <meta name="description" content="ต้นแบบแอป Distance สำหรับผู้สูงอายุและครอบครัว">
+  <title>Distance | ครอบครัวและชุมชน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="masthead">
+      <div class="top">
+        <a class="brand" href="./" aria-label="Distance หน้าแรก"><img src="logo.webp" alt="Distance"></a>
+        <div class="header-tools">
+          <div class="modes" role="group" aria-label="โหมดใช้งาน">
+            <button data-mode="user" aria-pressed="true">ผู้สูงอายุ</button>
+            <button data-mode="family" aria-pressed="false">ครอบครัว</button>
+          </div>
+          <button id="line-inbox" class="inbox" aria-label="เปิดกล่อง LINE จำลอง"><span class="icon" aria-hidden="true">notifications</span></button>
+        </div>
+      </div>
+      <div class="hero">
+        <p id="mode-label">คุณสมใจ · โหมดผู้สูงอายุ</p>
+        <h1 id="hero-title">เพื่อนและกิจกรรม</h1>
+        <p id="hero-copy">เลือกกิจกรรมที่อยากทำ แล้วชวนเพื่อนไปด้วยกัน</p>
+      </div>
+    </header>
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="./" aria-label="Distance หน้าแรก"><img src="logo.webp" alt="Distance"></a>
+      <nav id="nav" class="bottom-nav" aria-label="เมนูหลัก"></nav>
+    </aside>
+    <main id="main">
+      <div id="panel"></div>
+      <footer class="demo-footer">
+        <button id="line-login" aria-pressed="false">ทดลองเข้าสู่ระบบด้วย LINE</button>
+        <p class="note">ข้อมูลเดโมบันทึกในเบราว์เซอร์นี้ การอ่านเอกสารด้วย AI, LINE และ GPS เป็นการจำลอง</p>
+      </footer>
+    </main>
+  </div>
+  <div id="announce" role="status" class="notice" hidden></div>
+  <dialog id="modal" aria-labelledby="dialog-title">
+    <div id="modal-content"></div>
+    <form method="dialog"><button class="quiet">ปิด</button></form>
+  </dialog>
+</body>
+</html>
